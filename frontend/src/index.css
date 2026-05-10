@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global Reset & Base ─────────────────────────────── */
+* {
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c7d2fe; border-radius: 4px; }
+.dark ::-webkit-scrollbar-thumb { background: #4338ca; }
+
+/* ── Utility Classes ─────────────────────────────────── */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-extrabold rounded-2xl
+         py-3 px-6 hover:opacity-90 active:scale-95 transition-all duration-150 shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700
+         text-gray-700 dark:text-gray-300 font-extrabold rounded-2xl
+         py-3 px-6 hover:bg-gray-50 dark:hover:bg-gray-700 active:scale-95 transition-all duration-150 shadow-sm;
+}
